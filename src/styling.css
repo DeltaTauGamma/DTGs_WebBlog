@@ -18,6 +18,7 @@
     background-color: powderblue;
 }
 
-header {
-margin: 0;
+.T_buttons {
+    width:50%;
+    text-align:center;
 }

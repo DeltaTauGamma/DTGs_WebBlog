@@ -1,14 +1,20 @@
-
 body {
-    margin:30px;
-    border:0px;
+    margin: 30px;
+    border: 0px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+@font-face {
+    font-family: courierPrime;
+    src: url(fonts/CourierPrime-Regular.ttf)
 }
 
 .header {
-    font-family: Arial;
+    font-family: courierPrime;
     text-align: center;
     font-size: 75px;
-    color: #405F4F;
+    color: #FFFFF;
 }
 
 .top_extended {
@@ -24,7 +30,7 @@ body {
 
 .text_top {
     font-size:25px;
-    font-family:Arial;
+    font-family:CourierPrime;
     text-decoration: underline;
     letter-spacing:3px;
 }
@@ -43,5 +49,8 @@ body {
     border-radius: 10px;
     margin-top:20px;
     padding: 10px;
-    font-family:Arial;
+    font-family: CourierPrime;
+    text-align: center;
 }
+
+

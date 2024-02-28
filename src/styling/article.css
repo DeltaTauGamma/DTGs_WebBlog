@@ -1,0 +1,27 @@
+@font-face {
+    font-family: courierPrime;
+    src: url(fonts/CourierPrime-Regular.ttf)
+}
+
+ body {
+    padding-right: 350px;
+    padding-left: 350px;
+ }
+
+.top {
+    text-align: center;
+    border-bottom: 4px dashed black
+}
+
+.topText {
+    font-family: courierPrime;
+    font-size: 40px;
+}
+
+.article_1 {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top:50px;
+    padding: 10px;
+    font-family: CourierPrime;
+}

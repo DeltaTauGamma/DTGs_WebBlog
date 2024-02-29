@@ -10,6 +10,10 @@ body {
     src: url(fonts/CourierPrime-Regular.ttf)
 }
 
+a {
+    color: black;
+}
+
 .header {
     font-family: courierPrime;
     text-align: center;
@@ -34,15 +38,6 @@ body {
     text-decoration: underline;
     letter-spacing:3px;
 }
-    .text_top:link {
-    color:black;
-    }
-    .text_top:hover {
-    color:blue;
-    }
-    .text_top:active {
-    color:red;
-    }
 
 .about_me {
     border: 2px solid black;
@@ -50,7 +45,7 @@ body {
     margin-top:20px;
     padding: 10px;
     font-family: CourierPrime;
-    text-align: center;
+    text-align: left;
 }
 
 

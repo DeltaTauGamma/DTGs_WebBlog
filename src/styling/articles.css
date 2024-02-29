@@ -3,10 +3,9 @@
     src: url(fonts/CourierPrime-Regular.ttf)
 }
 
- body {
-    padding-right: 350px;
-    padding-left: 350px;
- }
+a {
+    color: black;
+}
 
 .top {
     text-align: center;
@@ -16,12 +15,13 @@
 .topText {
     font-family: courierPrime;
     font-size: 40px;
+    text-decoration: none;
 }
 
-.article_1 {
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-top:50px;
-    padding: 10px;
-    font-family: CourierPrime;
+.article {
+    font-family: courierPrime;
+    text-align: left;
+    padding-top: 20px;
+    padding-right: 350px;
+    padding-left: 350px;
 }

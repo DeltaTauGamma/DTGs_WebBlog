@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DTG'S BLOG - PACMAN</title>
+    <link rel="stylesheet" type="text/css" href="styling/articles.css">
+</head>
+<body>
+  <div class="top">
+    <a class="topText" href="DTGBlog_Main.html">DTG'S BLOG</a>
+  </div>
+
+  <div class="article">
+    <h1 id="pacman-">PACMAN!</h1>
+    <p>I am making a replica of PACMAN and I am going to call it red-pacman. Why? Well...</p>
+    <p>Pacman is undoubtedly one of the most famous videogame of all time. Personally, I&#39;ve been able to enjoy it a couple of
+      times, however, that is not the reason why I&#39;m making the replica. The actual reason is a meme I saw a while ago. To
+      give you some context, in Spain pacman was advertised as &quot;Comecocos&quot; (somewhat translated to mind eater, kinda), so what
+      this meme was doing was swapping the &quot;cocos&quot; for &quot;rojos&quot;, ending up with &quot;comerojos&quot; which once translated means
+      Communist eater (&quot;Redeater&quot;). This came up as really funny to me, so I decided to make a replica of pacman, with all
+      the ghosts being different communist leaders or ideologists.</p>
+    <p>At this point you
+      should know that the project is already a several months old, although I haven&#39;t worked on it for a very long time.
+      As such, I&#39;m not going to go through every step of the way, instead I&#39;ll simply show you how it is currently and then,
+      once I have finished doing that, continue with development. So without further ado, let&#39;s begin!</p>
+    <p>I decided to do this game on Godot, an open-source and free game engine. I chose Godot for two reasons: the first is
+      that I&#39;m into open source and the second is that I really didn&#39;t feel like signing up for anything. In godot, I created
+      the my node framework and added the tylemap.</p>
+    <p><img src="/images/COMEROJOS-screenShot.png" alt="The state of the game"></p>
+    <p>I also began coding, although it doesn&#39;t quite work, it&#39;s the following:</p>
+    <pre><code><span class="hljs-keyword">extends</span> KinematicBody2D
+
+
+var movement = Vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+var speed = <span class="hljs-number">20</span>
+var direction = <span class="hljs-number">1</span>
+var Level = load(<span class="hljs-string">"Level design.gd"</span>)
+var Map = Level.<span class="hljs-keyword">new</span>()
+
+func _ready():
+pass # Replace with function body.
+func blocked(direction):
+pass
+<span class="hljs-keyword">if</span>  direction == 0 &amp;&amp; Map.get_cell(position.x + 1, position.y) == -1:
+<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>
+elif direction == 1 &amp;&amp; Map.get_cell(position.x, position.y + 1) == -1:
+<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>
+
+
+func _physics_process(delta):
+
+    <span class="hljs-keyword">if</span> Input.is_action_just_pressed(<span class="hljs-string">"ui_right"</span>) &amp;&amp; !blocked(0):
+        movement = Vector2(0, speed)
+    <span class="hljs-keyword">if</span> Input.is_action_just_pressed(<span class="hljs-string">"ui_up"</span>) &amp;&amp; !blocked(1):
+        movement = Vector2(speed, 0)
+    <span class="hljs-keyword">if</span> Input.is_action_just_pressed(<span class="hljs-string">"ui_left"</span>) &amp;&amp; !blocked(2):
+        movement = Vector2(0, -speed)
+    <span class="hljs-keyword">if</span> Input.is_action_just_pressed(<span class="hljs-string">"ui_down"</span>) &amp;&amp; !blocked(3):
+        movement = Vector2(-speed, 0)
+
+    move_and_collide(movement * delta)
+</code></pre><p>Anyways, this is all for now. I&#39;ll keep you up to date with any breakthroughs I make. See ya!</p>
+  </div>
+</body>
+</html>
